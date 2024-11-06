@@ -8,6 +8,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{A8CF742A-2
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskManagement.Api", "src\TaskManagement.Api\TaskManagement.Api.csproj", "{3B355A4B-7296-4969-A5B5-F0BF9E69C7A4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskManagement.Api.Tests", "tests\TaskManagement.Api.Tests\TaskManagement.Api.Tests.csproj", "{575A572E-EABD-4F03-BCFC-797285743D82}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,11 +17,16 @@ Global
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{3B355A4B-7296-4969-A5B5-F0BF9E69C7A4} = {19B086EC-C8FD-47C3-8DEB-B42215BD10E4}
+		{575A572E-EABD-4F03-BCFC-797285743D82} = {32BD0CD2-3124-4FD5-8B08-9EC28495E688}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{3B355A4B-7296-4969-A5B5-F0BF9E69C7A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{3B355A4B-7296-4969-A5B5-F0BF9E69C7A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3B355A4B-7296-4969-A5B5-F0BF9E69C7A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3B355A4B-7296-4969-A5B5-F0BF9E69C7A4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{575A572E-EABD-4F03-BCFC-797285743D82}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{575A572E-EABD-4F03-BCFC-797285743D82}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{575A572E-EABD-4F03-BCFC-797285743D82}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{575A572E-EABD-4F03-BCFC-797285743D82}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

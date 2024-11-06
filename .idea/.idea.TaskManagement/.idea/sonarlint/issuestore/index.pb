@@ -29,3 +29,5 @@ j
 :src/TaskManagement.Api/Dtos/Authentication/LogInRequest.cs,9/4/948b64bf2c06601da7a422b61312fa027d918ed8
 q
 Asrc/TaskManagement.Api/Repositories/Interfaces/IAuthRepository.cs,1/9/19f80425c56ecf9ae2742610e81b6b417bd32a9e
+X
+(tests/TaskManagement.Api.Tests/Usings.cs,2/1/218f90639304c6cc6b6ceec22224857063f84280
