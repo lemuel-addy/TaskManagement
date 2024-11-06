@@ -61,6 +61,7 @@ public class AuthService:IAuthService
         throw new NotImplementedException();
     }
     
+    
     public Task<ApiResponse<string>> LogInAsync(LogInRequest request)
     {
         
