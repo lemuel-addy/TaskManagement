@@ -35,3 +35,5 @@ r
 Bsrc/TaskManagement.Api/Dtos/Authentication/GenerateTokenRequest.cs,3/7/37db149efa9e06a38506a40d2c02964a64942445
 o
 ?src/TaskManagement.Api/Extensions/ServiceCollectionExtension.cs,f/1/f1ad240390904da87c7b50f1ed7b160fa3f4ea66
+c
+3src/TaskManagement.Api/appsettings.Development.json,2/0/20756e10b7aef83ebe83817b4e2a9ffc63d6bc89
