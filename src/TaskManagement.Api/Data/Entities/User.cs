@@ -6,14 +6,16 @@ namespace TaskManagement.Api.Data.Entities;
 public class User:Entity
 {
     [Required(ErrorMessage = "{0} is required")]
+    [StringLength(15, ErrorMessage = "{0} must be at most 15 characters long")]
     public string Username { get; set; }
     
     [Required(ErrorMessage = "{0} is required")]
-    [StringLength(10, ErrorMessage = "{0} must be at most 10 characters long")]
+    [StringLength(15, ErrorMessage = "{0} must be at most 15 characters long")]
     public string Contacts { get; set; }
     
     [Required(ErrorMessage = "{0} is required")]
-    [Url]
+    [EmailAddress]
+    [StringLength(15, ErrorMessage = "{0} must be at most 15 characters long")]
     public string Email { get; set; }
     
     [Required(ErrorMessage = "Password is required")]

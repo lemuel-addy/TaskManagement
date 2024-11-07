@@ -1,8 +1,8 @@
-using System.Text;
-using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.IdentityModel.Tokens;
 using TaskManagement.Api.Data;
+using TaskManagement.Api.Data.Entities;
+using TaskManagement.Api.Extensions;
 using TaskManagement.Api.Models;
 using TaskManagement.Api.Repositories.Interfaces;
 using TaskManagement.Api.Repositories.Providers;
@@ -18,31 +18,13 @@ var config = builder.Configuration;
 services.AddDbContext<ApplicationDbContext>(options =>
     options.UseNpgsql(config.GetConnectionString("DbConnection")));
 
+services.AddScoped<IPasswordHasher<User>, PasswordHasher<User>>();
 services.AddScoped<IAuthService, AuthService>();
 services.AddScoped<IAuthRepository, AuthRepository>();
 services.Configure<BearerTokenConfig>(config.GetSection(nameof(BearerTokenConfig)));
 
-services.AddAuthentication(x =>
-    {
-        x.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-        x.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
-        x.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
-    })
-    .AddJwtBearer(x =>
-        {
-            x.SaveToken = true;
-            x.TokenValidationParameters = new TokenValidationParameters
-            {
-                ValidIssuer = builder.Configuration["BearerTokenConfig:Issuer"],
-                ValidAudience = builder.Configuration["BearerTokenConfig:Audience"],
-                ValidateIssuerSigningKey = true,
-                IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["BearerTokenConfig:SigningKey"]!)),
-                ValidateIssuer = true,
-                ValidateAudience = true,         
-                ValidateLifetime = true
-            };
-        }
-    );
+services.AddBearerAuthentication(config);
+
 // Add services to the container.
 
 builder.Services.AddControllers();
@@ -57,6 +39,7 @@ if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
+    app.UseDeveloperExceptionPage();
 }
 
 app.UseHttpsRedirection();

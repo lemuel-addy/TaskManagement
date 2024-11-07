@@ -31,3 +31,7 @@ q
 Asrc/TaskManagement.Api/Repositories/Interfaces/IAuthRepository.cs,1/9/19f80425c56ecf9ae2742610e81b6b417bd32a9e
 X
 (tests/TaskManagement.Api.Tests/Usings.cs,2/1/218f90639304c6cc6b6ceec22224857063f84280
+r
+Bsrc/TaskManagement.Api/Dtos/Authentication/GenerateTokenRequest.cs,3/7/37db149efa9e06a38506a40d2c02964a64942445
+o
+?src/TaskManagement.Api/Extensions/ServiceCollectionExtension.cs,f/1/f1ad240390904da87c7b50f1ed7b160fa3f4ea66

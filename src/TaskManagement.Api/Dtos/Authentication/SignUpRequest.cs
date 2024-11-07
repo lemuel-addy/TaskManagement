@@ -12,7 +12,7 @@ public class SignUpRequest
     public string Contacts { get; set; }
     
     [Required(ErrorMessage = "{0} is required")]
-    [Url]
+    [EmailAddress]
     public string Email { get; set; }
     
     [Required(ErrorMessage = "Password is required")]
